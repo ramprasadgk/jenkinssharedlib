@@ -17,7 +17,7 @@ String getBranch() {
 }
 
 String getCommitId() {
-    String commitId = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
+    String commitId = bat(returnStdout: true, script: 'git.exe rev-parse HEAD').trim()
     return commitId;
 }
 
